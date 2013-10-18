@@ -10,6 +10,7 @@ var helloworld = require('./routes/helloworld');
 var http = require('http');
 var path = require('path');
 var config = require('./config')();
+var MongoClient = require('mongodb').MongoClient;
 
 var app = express();
 
@@ -35,6 +36,18 @@ app.get('/', routes.index);
 app.get('/users', user.list);
 app.get('/helloworld', helloworld.helloworld);
 
-http.createServer(app).listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'));
+var mongoDbConnection = 'mongodb://'+ config.mongodb.host + ':' + config.mongodb.port + '/' + config.mongodb.dbName;
+MongoClient.connect(mongoDbConnection, function(err, db) {
+  if(err) {
+    console.log('Sorry, there is no mongo db server running. Connection string is \'' + mongoDbConnection + '\'');
+  } else {
+    var attachDB = function(req, res, next) {
+      req.db = db;
+      next();
+    };
+    http.createServer(app).listen(app.get('port'), function(){
+	  console.log('Using mongo db server at \'' + mongoDbConnection + '\'');
+      console.log('Express server listening on port ' + app.get('port'));
+    });
+  }
 });
