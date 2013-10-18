@@ -16,6 +16,7 @@
 	 expect(config.mongo).toBeDefined();
 	 expect(config.mongo.host).toBe('localhost');
 	 expect(config.mongo.port).toBe(27017);
+	 expect(config.mongo.dbName).toBe('nodetest1');
      next();
    });
    it("should load local configuration", function(next) {
@@ -25,6 +26,7 @@
 	 expect(config.mongo).toBeDefined();
 	 expect(config.mongo.host).toBe('localhost');
 	 expect(config.mongo.port).toBe(27017);
+	 expect(config.mongo.dbName).toBe('nodetest1');
      next();
    });
    it("should load local configuration", function(next) {
@@ -34,6 +36,7 @@
 	 expect(config.mongo).toBeDefined();
 	 expect(config.mongo.host).toBe('localhost');
 	 expect(config.mongo.port).toBe(27017);
+	 expect(config.mongo.dbName).toBe('nodetest1');
      next();
    });
  });
