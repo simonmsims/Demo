@@ -9,6 +9,7 @@ describe("Models", function() {
         var model = new Model(dbMockup);
         expect(model.db).toBeDefined();
         expect(model.extend).toBeDefined();
+		expect(model.collection).toBeDefined();
         next();
     });
     it("should be extendable", function(next) {
@@ -19,6 +20,7 @@ describe("Models", function() {
         var model2 = new OtherTypeOfModel(dbMockup);
         expect(model2.db).toBeDefined();
         expect(model2.myCustomModelMethod).toBeDefined();
+		expect(model.collection).toBeDefined();
         next();
     })
 });
