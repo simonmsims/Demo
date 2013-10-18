@@ -6,7 +6,7 @@ var config = {
   local: { 
     mode: 'local', 
 	port: 3000, 
-	mongo: { 
+	mongodb: { 
 	  host: 'localhost', 
 	  port: 27017,
 	  dbName: 'nodetest1',
@@ -15,7 +15,7 @@ var config = {
   staging: { 
     mode: 'staging', 
 	port: 4000, 
-	mongo: { 
+	mongodb: { 
 	  host: 'localhost', 
 	  port: 27017,
 	  dbName: 'nodetest1',
@@ -24,7 +24,7 @@ var config = {
   production: { 
     mode: 'production', 
 	port: 5000, 
-	mongo: { 
+	mongodb: { 
 	  host: 'localhost', 
 	  port: 27017,
       dbName: 'nodetest1',	  
