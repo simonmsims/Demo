@@ -13,18 +13,21 @@
 	 var config = require('../config')('local');
 	 expect(config.mode).toBe('local');
 	 expect(config.port).toBe(3000);
+	 expect(config.mongo).toBeDefined();
      next();
    });
    it("should load local configuration", function(next) {
      var config = require('../config')('staging');
 	 expect(config.mode).toBe('staging');
 	 expect(config.port).toBe(4000);
+	 expect(config.mongo).toBeDefined();
      next();
    });
    it("should load local configuration", function(next) {
      var config = require('../config')('production');
 	 expect(config.mode).toBe('production');
 	 expect(config.port).toBe(5000);
+	 expect(config.mongo).toBeDefined();
      next();
    });
  });
