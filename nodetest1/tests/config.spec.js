@@ -14,6 +14,8 @@
 	 expect(config.mode).toBe('local');
 	 expect(config.port).toBe(3000);
 	 expect(config.mongo).toBeDefined();
+	 expect(config.mongo.host).toBe('localhost');
+	 expect(config.mongo.port).toBe(27017);
      next();
    });
    it("should load local configuration", function(next) {
@@ -21,6 +23,8 @@
 	 expect(config.mode).toBe('staging');
 	 expect(config.port).toBe(4000);
 	 expect(config.mongo).toBeDefined();
+	 expect(config.mongo.host).toBe('localhost');
+	 expect(config.mongo.port).toBe(27017);
      next();
    });
    it("should load local configuration", function(next) {
@@ -28,6 +32,8 @@
 	 expect(config.mode).toBe('production');
 	 expect(config.port).toBe(5000);
 	 expect(config.mongo).toBeDefined();
+	 expect(config.mongo.host).toBe('localhost');
+	 expect(config.mongo.port).toBe(27017);
      next();
    });
  });
