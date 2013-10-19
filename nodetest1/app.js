@@ -4,9 +4,9 @@
  */
 
 var express = require('express');
-var routes = require('./routes');
-var user = require('./routes/user');
-var helloworld = require('./routes/helloworld');
+var controllers = require('./controllers');
+var user = require('./controllers/user');
+var helloworld = require('./controllers/helloworld');
 var http = require('http');
 var path = require('path');
 var config = require('./config')();
@@ -32,7 +32,7 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', routes.index);
+app.get('/', controllers.index);
 app.get('/users', user.list);
 app.get('/helloworld', helloworld.helloworld);
 
