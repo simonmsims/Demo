@@ -5,14 +5,14 @@
 var View = require("../views/base/base.js");
 describe("Base view", function() {
   it("create and render new view", function(next) {
-    var responseMockup = {
+    var responseMock = {
       render: function(template, data) {
         expect(template).toBe('template-file');
         expect(data.myProperty).toBe('value');
         next();
       }
     }
-    var v = new View(responseMockup, 'template-file');
+    var v = new View(responseMock, 'template-file');
     v.render({myProperty: 'value'});
   });
   it("should be extendable", function(next) {
