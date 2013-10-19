@@ -15,7 +15,7 @@ describe("Base view", function() {
     var v = new View(responseMock, 'template-file');
     v.render({myProperty: 'value'});
   });
-  it("should be extendable", function(next) {
+  it("should be extensible", function(next) {
     var v = new View();
     var OtherView = v.extend({
       render: function(data) {
