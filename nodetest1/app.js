@@ -46,7 +46,7 @@ MongoClient.connect(mongoDbConnection, function(err, db) {
       next();
     };
     http.createServer(app).listen(app.get('port'), function(){
-	  console.log('Using mongo db server at \'' + mongoDbConnection + '\'');
+	  console.log('Using mongodb server at \'' + mongoDbConnection + '\'');
       console.log('Express server listening on port ' + app.get('port'));
     });
   }
