@@ -11,7 +11,7 @@ describe("Base view", function() {
         expect(data.myProperty).toBe('value');
         next();
       }
-    }
+    };
     var v = new View(responseMock, 'template-file');
     v.render({myProperty: 'value'});
   });
