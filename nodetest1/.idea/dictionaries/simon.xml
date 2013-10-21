@@ -1,7 +1,9 @@
 <component name="ProjectDictionaryState">
   <dictionary name="simon">
     <words>
+      <w>crypto</w>
       <w>helloworld</w>
+      <w>middleware</w>
       <w>mongo</w>
       <w>mongodb</w>
     </words>

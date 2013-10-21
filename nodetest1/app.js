@@ -7,6 +7,7 @@ var express = require('express');
 var controllers = require('./controllers');
 var user = require('./controllers/user');
 var helloworld = require('./controllers/helloworld');
+var admin = require('./controllers/Admin');
 var http = require('http');
 var path = require('path');
 var config = require('./config')();
@@ -16,7 +17,7 @@ var app = express();
 
 // all environments
 app.set('port', config.port);
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'templates'));
 app.set('view engine', 'jade');
 app.use(express.favicon());
 app.use(express.logger('dev'));
@@ -45,6 +46,11 @@ MongoClient.connect(mongoDbConnection, function(err, db) {
       req.db = db;
       next();
     };
+
+    app.all('/admin*', attachDB, function(req, res, next) {
+      admin.run(req, res, next);
+    });
+
     http.createServer(app).listen(app.get('port'), function(){
 	  console.log('Using mongodb server at \'' + mongoDbConnection + '\'');
       console.log('Express server listening on port ' + app.get('port'));
