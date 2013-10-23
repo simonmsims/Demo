@@ -13,7 +13,8 @@
     <file path="/a.js" changelist="24a1387e-99ed-4313-a9f6-ca9ba6d9f221" time="1382193745467" ignored="false" />
     <file path="/a.coffee" changelist="24a1387e-99ed-4313-a9f6-ca9ba6d9f221" time="1382193686693" ignored="false" />
     <file path="/Dummy.txt" changelist="24a1387e-99ed-4313-a9f6-ca9ba6d9f221" time="1382369975339" ignored="false" />
-    <file path="/index.jade" changelist="24a1387e-99ed-4313-a9f6-ca9ba6d9f221" time="1382372359341" ignored="false" />
+    <file path="/index.jade" changelist="24a1387e-99ed-4313-a9f6-ca9ba6d9f221" time="1382372381778" ignored="false" />
+    <file path="/admin-login.jade" changelist="24a1387e-99ed-4313-a9f6-ca9ba6d9f221" time="1382542993410" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,10 +43,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin-login.jade" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="admin-login.jade" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/admin-login.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="14" column="39" selection-start="275" selection-end="275" vertical-scroll-proportion="0.66853935">
               <folding />
             </state>
           </provider>
@@ -54,7 +55,7 @@
       <file leaf-file-name="admin.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/admin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="29" selection-start="964" selection-end="964" vertical-scroll-proportion="0.0">
+            <state line="37" column="57" selection-start="1027" selection-end="1027" vertical-scroll-proportion="0.0">
               <folding>
                 <marker date="1382370992579" expanded="true" signature="1391:1557" placeholder="..." />
                 <marker date="1382370992579" expanded="true" signature="1641:1652" placeholder="..." />
@@ -64,10 +65,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.jade" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.jade" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/index.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="31" selection-start="97" selection-end="97" vertical-scroll-proportion="0.23876405">
+            <state line="4" column="23" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -155,8 +156,8 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/controllers/admin.js" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/templates/admin-login.jade" />
         <option value="$PROJECT_DIR$/templates/index.jade" />
+        <option value="$PROJECT_DIR$/templates/admin-login.jade" />
       </list>
     </option>
   </component>
@@ -528,13 +529,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/base/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/contentModel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="24" selection-start="83" selection-end="83" vertical-scroll-proportion="0.0">
@@ -545,13 +539,6 @@
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="13" selection-start="245" selection-end="245" vertical-scroll-proportion="-7.8461537">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/layout.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="17" selection-start="121" selection-end="121" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -577,7 +564,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin-login.jade">
+    <entry file="file://$PROJECT_DIR$/templates/index.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="23" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/layout.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="17" selection-start="121" selection-end="121" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/base/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
@@ -586,7 +587,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/admin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="29" selection-start="964" selection-end="964" vertical-scroll-proportion="0.0">
+        <state line="37" column="57" selection-start="1027" selection-end="1027" vertical-scroll-proportion="0.0">
           <folding>
             <marker date="1382370992579" expanded="true" signature="1391:1557" placeholder="..." />
             <marker date="1382370992579" expanded="true" signature="1641:1652" placeholder="..." />
@@ -595,9 +596,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.jade">
+    <entry file="file://$PROJECT_DIR$/templates/admin-login.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="31" selection-start="97" selection-end="97" vertical-scroll-proportion="0.23876405">
+        <state line="14" column="39" selection-start="275" selection-end="275" vertical-scroll-proportion="0.66853935">
           <folding />
         </state>
       </provider>

@@ -2,4 +2,14 @@ extends layout
 
 block content
     h1= title
-    p Welcome to #{title}
+    form(action='/admin', method='post')
+    | Username:
+    br
+    input(type='text', name='username')
+    br
+    | Password:
+    br
+    input(type='password', name='password')
+    br
+    br
+    input(type='submit', value='login')
