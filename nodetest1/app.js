@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -29,10 +28,15 @@ app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
+var compressCss = false;
+if (config.mode == 'production') {
+  compressCss = true;
+}
+
 app.configure(function(){
   app.use(lessMiddleware({
-    src      : __dirname + "/public"
-    //compress : true
+    src      : __dirname + "/public",
+    compress : compressCss
   }));
 });
 

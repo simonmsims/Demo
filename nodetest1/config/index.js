@@ -9,8 +9,8 @@ var config = {
 	mongodb: { 
 	  host: 'localhost', 
 	  port: 27017,
-	  dbName: 'nodetest1',
-	} 
+	  dbName: 'nodetest1_local'
+	  }
   },
   staging: { 
     mode: 'staging', 
@@ -18,17 +18,17 @@ var config = {
 	mongodb: { 
 	  host: 'localhost', 
 	  port: 27017,
-	  dbName: 'nodetest1',
-	} 
+	  dbName: 'nodetest1_staging'
+	  }
   },
   production: { 
     mode: 'production', 
-	port: 5000, 
-	mongodb: { 
-	  host: 'localhost', 
-	  port: 27017,
-      dbName: 'nodetest1',	  
-	}
+	  port: 5000,
+	  mongodb: {
+	    host: 'localhost',
+	    port: 27017,
+      dbName: 'nodetest1_prod'
+	  }
   }
 }
 
