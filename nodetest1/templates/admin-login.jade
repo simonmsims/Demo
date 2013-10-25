@@ -1,15 +1,15 @@
-extends layout
+extends layout-admin
 
 block content
-    h1= title
-    form(action='/admin', method='post')
-      | Username:
-      br
-      input(type='text', name='username')
-      br
-      | Password:
-      br
-      input(type='password', name='password')
-      br
-      br
-      input(type='submit', value='login')
+  h1= title
+  form(action='/admin', method='post')
+    | Username:
+    br
+    input(type='text', name='username')
+    br
+    | Password:
+    br
+    input(type='password', name='password')
+    br
+    br
+    input(type='submit', value='login')

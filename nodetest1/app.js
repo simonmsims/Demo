@@ -12,6 +12,7 @@ var http = require('http');
 var path = require('path');
 var config = require('./config')();
 var MongoClient = require('mongodb').MongoClient;
+var lessMiddleware = require('less-middleware');
 
 var app = express();
 
@@ -27,6 +28,13 @@ app.use(express.cookieParser('your secret here'));
 app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.configure(function(){
+  app.use(lessMiddleware({
+    src      : __dirname + "/public"
+    //compress : true
+  }));
+});
 
 // development only
 if ('development' == app.get('env')) {
