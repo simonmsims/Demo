@@ -18,7 +18,7 @@
     <file path="/layout.jade" changelist="24a1387e-99ed-4313-a9f6-ca9ba6d9f221" time="1382716797073" ignored="false" />
     <file path="/layout-admin.jade" changelist="24a1387e-99ed-4313-a9f6-ca9ba6d9f221" time="1382716908266" ignored="false" />
     <file path="/admin.css" changelist="24a1387e-99ed-4313-a9f6-ca9ba6d9f221" time="1382717636934" ignored="false" />
-    <file path="/admin.jade" changelist="24a1387e-99ed-4313-a9f6-ca9ba6d9f221" time="1382719432154" ignored="false" />
+    <file path="/admin.jade" changelist="24a1387e-99ed-4313-a9f6-ca9ba6d9f221" time="1382719507295" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +77,7 @@
       <file leaf-file-name="admin.jade" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/admin.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="4" selection-start="146" selection-end="146" vertical-scroll-proportion="0.54111403">
+            <state line="10" column="7" selection-start="126" selection-end="126" vertical-scroll-proportion="0.4509284">
               <folding />
             </state>
           </provider>
@@ -629,7 +629,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/admin.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="4" selection-start="146" selection-end="146" vertical-scroll-proportion="0.54111403">
+        <state line="10" column="7" selection-start="126" selection-end="126" vertical-scroll-proportion="0.4509284">
           <folding />
         </state>
       </provider>
