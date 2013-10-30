@@ -1,6 +1,7 @@
 var Model = require("./base"),
   crypto = require("crypto"),
   model = new Model();
+
 var ContentModel = model.extend({
   insert: function(data, callback) {
     data.ID = crypto.randomBytes(20).toString('hex');
