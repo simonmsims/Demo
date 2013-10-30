@@ -1,6 +1,7 @@
 var BaseController = require("./base"),
   View = require("../views/base/base.js"),
-  model = new (require("../models/contentModel")),
+  //model = new (require("../models/contentModel")),
+  userModel = new (require("../models/userModel")),
   crypto = require("crypto"),
   fs = require("fs");
 
@@ -11,13 +12,16 @@ module.exports = BaseController.extend({
 
   get: function(req, res, next) {
     if(this.authorize(req)) {
-      model.setDB(req.db);
       req.session.fastdelivery = true;
       req.session.save();
-      var v = new View(res, 'admin');
-      v.render({
-        title: 'Administration',
-        content: 'Welcome to the control panel by get'
+      userModel.setDB(req.db);
+      userModel.getlist(function(error, userList){
+        var v = new View(res, 'admin');
+        v.render({
+          title: 'Administration',
+          content: 'Welcome to the control panel by get',
+          employees: userList
+        });
       });
     } else {
       var v = new View(res, 'admin-login');
@@ -29,13 +33,16 @@ module.exports = BaseController.extend({
 
   post: function(req, res, next) {
     if(this.authorize(req)) {
-      model.setDB(req.db);
       req.session.fastdelivery = true;
       req.session.save();
-      var v = new View(res, 'admin');
-      v.render({
-        title: 'Administration',
-        content: 'Welcome to the control panel by post'
+      userModel.setDB(req.db);
+      userModel.getlist(function(error, userList){
+        var v = new View(res, 'admin');
+        v.render({
+          title: 'Administration',
+          content: 'Welcome to the control panel by get',
+          employees: userList
+        });
       });
     } else {
       var v = new View(res, 'admin-login');
