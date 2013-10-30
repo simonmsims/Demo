@@ -14,7 +14,7 @@ module.exports = BaseController.extend({
       model.setDB(req.db);
       req.session.fastdelivery = true;
       req.session.save();
-      var v = new View(res, 'admin');
+      var v = new View(res, 'adminOld');
       self.del(req, function() {
         self.form(req, res, function(formMarkup) {
           self.list(function(listMarkup) {

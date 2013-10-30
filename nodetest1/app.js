@@ -12,6 +12,7 @@ var lessMiddleware = require('less-middleware');
 // controllers
 var express = require('express');
 var controllers = require('./controllers');
+var admin = require('./controllers/admin');
 var user = require('./controllers/user');
 var helloworld = require('./controllers/helloworld');
 var adminOld = require('./controllers/adminOld');
@@ -61,6 +62,14 @@ MongoClient.connect(mongoDbConnection, function(err, db) {
       req.db = db;
       next();
     };
+
+    app.get('/admin*', attachDB, function(req, res, next) {
+      admin.get(req, res, next);
+    });
+
+    app.post('/admin*', attachDB, function(req, res, next) {
+      admin.post(req, res, next);
+    });
 
     app.all('/adminOld*', attachDB, function(req, res, next) {
       adminOld.run(req, res, next);
