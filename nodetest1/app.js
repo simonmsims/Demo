@@ -1,17 +1,20 @@
 /**
- * Module dependencies.
+ * App entry point
  */
 
-var express = require('express');
-var controllers = require('./controllers');
-var user = require('./controllers/user');
-var helloworld = require('./controllers/helloworld');
-var admin = require('./controllers/adminOld');
+// dependencies
 var http = require('http');
 var path = require('path');
 var config = require('./config')();
 var MongoClient = require('mongodb').MongoClient;
 var lessMiddleware = require('less-middleware');
+
+// controllers
+var express = require('express');
+var controllers = require('./controllers');
+var user = require('./controllers/user');
+var helloworld = require('./controllers/helloworld');
+var adminOld = require('./controllers/adminOld');
 
 var app = express();
 
@@ -60,7 +63,7 @@ MongoClient.connect(mongoDbConnection, function(err, db) {
     };
 
     app.all('/adminOld*', attachDB, function(req, res, next) {
-      admin.run(req, res, next);
+      adminOld.run(req, res, next);
     });
 
     http.createServer(app).listen(app.get('port'), function(){
