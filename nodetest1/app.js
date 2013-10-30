@@ -6,7 +6,7 @@ var express = require('express');
 var controllers = require('./controllers');
 var user = require('./controllers/user');
 var helloworld = require('./controllers/helloworld');
-var admin = require('./controllers/Admin');
+var admin = require('./controllers/adminOld');
 var http = require('http');
 var path = require('path');
 var config = require('./config')();
@@ -59,7 +59,7 @@ MongoClient.connect(mongoDbConnection, function(err, db) {
       next();
     };
 
-    app.all('/admin*', attachDB, function(req, res, next) {
+    app.all('/adminOld*', attachDB, function(req, res, next) {
       admin.run(req, res, next);
     });
 
